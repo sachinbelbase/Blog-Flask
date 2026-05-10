@@ -1,0 +1,20 @@
+{
+  "params": {
+    "local_server": "True",
+    "prod_uri:": "mysql+pymysql://root:@localhost/talkandcode",
+    "local_uri": "mysql+pymysql://root:@localhost/talkandcode",
+    "fb_url": "https://facebook.com/talkandcode",
+    "insta_url": "https://instagram.com/talkandcode",
+    "gh_url": "https://github.com/talkandcode",
+    "blog_name": "Coffee and Flask",
+    "sub_title": "A Blog Where We Learn Coding while drinking Coffee",
+    "gmail_user": "ofnisdfbcvi;",
+    "gmail_pass": "hendafkjf",
+    "about_text": "Hello its me sachin. I am learning python and enjoying it..",
+    "no_of_post": 2,
+    "login_img": "login.svg",
+    "admin_user": "sachin",
+    "admin_pass": "hello",
+    "upload_location": "C:\\Users\\Acer\\Desktop\\Flask\\static"
+  }
+}
