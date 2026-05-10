@@ -138,8 +138,8 @@ def edit(sno):
                 db.session.commit()
                 return redirect('/edit/'+ sno)
             
-        post = Posts.query.filter_by(sno=sno).first()  if sno != '0' else None  
-        return render_template('edit.html',params=params, post=post)
+        post = Posts.query.filter_by(sno=sno).first()
+        return render_template('edit.html', params=params, post=post, sno=sno)
     
     return redirect('/dashboard')
 
