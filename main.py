@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, session, redirect
+from flask import Flask, render_template, request, session, redirect, flash
 from flask_sqlalchemy import SQLAlchemy
 from flask_mail import Mail
 from werkzeug.utils import secure_filename
@@ -178,13 +178,13 @@ def contact():
         entry = Contacts(name = name, phone_num = phone, msg = message, date= datetime.now(), email = email)
         db.session.add(entry)
         db.session.commit()
-        mail.send_message('New message from Blog from ' + name, 
-                        sender=email,
-                        recipients = [params['gmail_user']],
-                        body= message + "\n" + phone)
+        # mail.send_message('New message from Blog from ' + name, 
+        #                 sender=email,
+        #                 recipients = [params['gmail_user']],
+        #                 body= message + "\n" + phone)
         # flash("Your message has been sent!", "success")
         # return redirect(url_for('contact'))  
-        
+        flash("Thanks For Submitting Your Details", "success")
     return render_template('contact.html',params=params)
     
 if __name__ =="__main__":
