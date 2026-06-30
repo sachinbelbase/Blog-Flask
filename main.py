@@ -52,7 +52,12 @@ class Posts(db.Model):
     
     
     # http://localhost/phpmyadmin/ 
-    
+
+
+@app.route("/team")
+def xampp():
+    return render_template("team.html")
+
 @app.route("/")
 def home():
     posts = Posts.query.filter_by().all()
